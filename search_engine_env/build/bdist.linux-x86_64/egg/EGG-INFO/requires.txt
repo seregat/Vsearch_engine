@@ -1,6 +1,0 @@
-Flask==0.8
-validators
-urllib3
-urlparse3
-cookiejar
-bs4
