@@ -29,6 +29,7 @@ ln -s /usr/local/bin/pip3.4 /usr/bin/pip3.4
 ln -s /usr/local/bin/pyvenv-3.4 /usr/bin/virtualenv3.4
 cd /usr/share
 mkdir /usr/share/search_engine_env_serve
+cd /usr/share/search_engine_env_serve
 #rm -rf /usr/share/search_engine_env_serve
 #cp -r /usr/share/search_engine_env /usr/share/search_engine_env_serve
 #cd /usr/share/search_engine_env_serve
