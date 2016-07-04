@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+    <div>
+        <h1>Search Results</h1>
+       <ul>
+            {% for row in good_reponse %}
+                <li>
+                    <p>
+                        <b>Query: <span style="color:green">{{ row['query']}}</span></b>
+                    </p>
+                        <br>
+                    {{ row['response'] | safe }}
+                <hr>
+                </li>
+            {% endfor %}
+
+       </ul>
+    </div>
+    <div>
+        <h1>Error on Response</h1>
+        <ul>
+            {% for row in wrong_responses %}
+                <li>
+                    <p><b>Query: {{ row['query'] }}</b></p>
+                    {{ row['response'] }}
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h1>Wrong Queries</h1>
+            <ul>
+                {% for row in wrong_queries %}
+                     <li>
+                      <p><b style="color:orange">Query: {{ row }}</b></p>
+                    </li>
+                {% endfor %}
+
+            </ul>
+    </div>
+
+</body>
+</html>

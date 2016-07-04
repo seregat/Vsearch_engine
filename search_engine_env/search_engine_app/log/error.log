@@ -1,0 +1,236 @@
+
+        Message type: ERROR
+        Location: C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py:1587
+        Module: app
+        Function: log_exception
+        Time: 2016-07-04 00:09:12,356
+        Message:
+        Exception on /static/bootstrap-fileinput-master/js/locales/<lang>.js [GET]
+        
+Traceback (most recent call last):
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\helpers.py", line 892, in send_static_file
+    cache_timeout=cache_timeout)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\helpers.py", line 638, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1539, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1498, in handle_http_exception
+    return handler(e)
+  File "C:\Vagrant\search_engine_env\search_engine_app\__init__.py", line 54, in page_not_found
+    return render_template('page_not_found.html'), 404
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: page_not_found.html
+
+        Message type: ERROR
+        Location: C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py:1587
+        Module: app
+        Function: log_exception
+        Time: 2016-07-04 00:09:12,693
+        Message:
+        Exception on /static/bootstrap-fileinput-master/js/locales/<lang>.js [GET]
+        
+Traceback (most recent call last):
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\helpers.py", line 892, in send_static_file
+    cache_timeout=cache_timeout)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\helpers.py", line 638, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1539, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1498, in handle_http_exception
+    return handler(e)
+  File "C:\Vagrant\search_engine_env\search_engine_app\__init__.py", line 54, in page_not_found
+    return render_template('page_not_found.html'), 404
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: page_not_found.html
+
+        Message type: ERROR
+        Location: C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py:1587
+        Module: app
+        Function: log_exception
+        Time: 2016-07-04 00:09:12,944
+        Message:
+        Exception on /favicon.ico [GET]
+        
+Traceback (most recent call last):
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1617, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1600, in raise_routing_exception
+    raise request.routing_exception
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\ctx.py", line 294, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\werkzeug\routing.py", line 1563, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1539, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1498, in handle_http_exception
+    return handler(e)
+  File "C:\Vagrant\search_engine_env\search_engine_app\__init__.py", line 54, in page_not_found
+    return render_template('page_not_found.html'), 404
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: page_not_found.html
+
+        Message type: ERROR
+        Location: C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py:1587
+        Module: app
+        Function: log_exception
+        Time: 2016-07-04 00:09:18,839
+        Message:
+        Exception on /l [GET]
+        
+Traceback (most recent call last):
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1617, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1600, in raise_routing_exception
+    raise request.routing_exception
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\ctx.py", line 294, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\werkzeug\routing.py", line 1563, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1539, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1498, in handle_http_exception
+    return handler(e)
+  File "C:\Vagrant\search_engine_env\search_engine_app\__init__.py", line 54, in page_not_found
+    return render_template('page_not_found.html'), 404
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: page_not_found.html
+
+        Message type: ERROR
+        Location: C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py:1587
+        Module: app
+        Function: log_exception
+        Time: 2016-07-04 00:09:19,134
+        Message:
+        Exception on /favicon.ico [GET]
+        
+Traceback (most recent call last):
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1617, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1600, in raise_routing_exception
+    raise request.routing_exception
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\ctx.py", line 294, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\werkzeug\routing.py", line 1563, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1539, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\app.py", line 1498, in handle_http_exception
+    return handler(e)
+  File "C:\Vagrant\search_engine_env\search_engine_app\__init__.py", line 54, in page_not_found
+    return render_template('page_not_found.html'), 404
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\jinja2\environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\seregat\AppData\Local\Programs\Python\Python35-32\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: page_not_found.html

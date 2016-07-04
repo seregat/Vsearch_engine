@@ -38,7 +38,9 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
-
+.vagrant
+.Vagrant
+.VAGRANT
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop

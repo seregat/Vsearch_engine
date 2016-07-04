@@ -1,0 +1,3 @@
+[console_scripts]
+serve = search_engine_app.serve
+
