@@ -14,10 +14,10 @@ sudo yum install -y vim-X11 vim-common vim-enhanced vim-minimal
 #yum makecache
 
 
-sudo yum install -y htop
-sudo yum install -y vim
-sudo yum install -y nginx
-sudo yum install -y wget
+sudo yum install -y htop
+sudo yum install -y vim
+sudo yum install -y nginx
+sudo yum install -y wget
 wget https://www.python.org/ftp/python/3.4.5/Python-3.4.5.tar.xz
 tar -xvf Python-3.4.5.tar.xz
 
@@ -42,13 +42,33 @@ pip3.4 install --upgrade pip
 #pip3.4 install uwsgi
 #python3.4 setup.py register sdist upload
 pip3.4 install search_engine_app
-
-
-
-
-
 #this service defined in search_engine_env_serve/setup.py
-serve&
-tput setab 5
-echo 'flask server listen to 127.0.0.1:5000'
-tput setab 0
+
+
+
+
+cat > /etc/systemd/system/search_engine.service <<EOF
+[Unit]
+Description=Flask Search Engine Service
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/usr/share/search_engine_env_serve
+Environment="PATH=/usr/share/search_engine_env_serve/env/bin"
+ExecStart=/usr/share/search_engine_env_serve/env/bin/serve
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+
+sudo systemctl start search_engine
+sudo systemctl enable search_engine
+
+service search_engine status
+
+
+
+
