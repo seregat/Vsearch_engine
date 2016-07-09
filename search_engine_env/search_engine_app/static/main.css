@@ -1,0 +1,19 @@
+.pointer {
+  cursor:pointer;
+}
+.main-nav-bar-header{
+  max-width:300px !important;
+  min-height: 80px !important;
+  margin: auto;
+}
+.main-nav-bar-header .file-preview .close{
+  opacity:1 !important;
+  color:white !important;
+}
+.main-nav-bar-header .control-label{
+  color:white !important;
+}
+.main-container {
+  margin-top: 100px;
+}
+

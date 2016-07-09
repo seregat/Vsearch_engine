@@ -39,17 +39,22 @@ def define_app_routing():
     def upload_file():
         try:
             app.logger.debug('POST upload_file')
-            response = []
             file = request.files.get('file')
-            (good_reponse,wrong_responses,wrong_queries) = MainSearchService.searchOnGoogleFromFile(file)
-            return render_template('search_response.html',good_reponse=good_reponse,wrong_responses=wrong_responses,wrong_queries=wrong_queries)
-            app.logger.debug('Search result founded sucessfully:{0}'.format(response))
+            mimetype = file.content_type
+            if mimetype != "text/plain":
+                wrong_file_type = 'You can upload only text files.Please check you file type and try again.'
+                response = render_template('search_console.html',wrong_file_type_message=wrong_file_type)
+            else:
+                (good_reponse, wrong_responses, wrong_queries) = MainSearchService.searchOnGoogleFromFile(file)
+                response = render_template('search_console.html', good_reponse=good_reponse,wrong_responses=wrong_responses, wrong_queries=wrong_queries)
+                app.logger.debug('Search result founded sucessfully')
+
         except Exception as e:
             app.logger.debug('Error during upload_file:{0}'.format(str(e)))
+            response = render_template('search_console.html',unexpected_error='Error occured. Please try again or contact administrator.')
 
         return response
 
-        # END ROUTING
 
     app.logger.debug('define_app_routing DONE')
 
@@ -107,9 +112,8 @@ def define_module_behaviour():
 
 def serve():
     if Settings.getAppMode() == 'PRODUCTION':
-        logging.basicConfig(level=logging.DEBUG)
         logging.basicConfig(level=logging.ERROR)
-        app.run(host='0.0.0.0')  # ssl_context='adhoc'
+        app.run(host='0.0.0.0',port=80)  # ssl_context='adhoc'
     else:
         ##from  modules.search_engine_app.services.MainSearchService import MainSearchService
         # from  tests.modules.search_engine_app.services.googleSearchTests import googleSearchTests
