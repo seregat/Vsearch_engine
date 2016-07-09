@@ -6,7 +6,7 @@ import time
 
 class GoogleSearch:
     _url_search = "https://www.google.%(tld)s/search?hl=%(lang)s&q=%(query)s&btnG=Google+Search&tbs=%(tbs)s&safe=%(safe)s&tbm=%(tpe)s"
-
+    _user_agent = ['User-Agent','Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)']
     _mockupData = None
     @staticmethod
     def setMockupMode(mockupFile):
@@ -22,7 +22,7 @@ class GoogleSearch:
 
     def get_page(self,url):
         request = Request(url)
-        request.add_header('User-Agent','Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)')
+        request.add_header(GoogleSearch._user_agent[0],GoogleSearch._user_agent[1])
         response = urlopen(request)
         html = response.read()
         response.close()

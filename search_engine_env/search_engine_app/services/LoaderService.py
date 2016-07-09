@@ -86,6 +86,17 @@ class LoaderService :
         (good_reponse,wrong_responses) = LoaderService._postProcessResponses(responses)
         return good_reponse,wrong_responses,wrong_queries
 
+    @staticmethod
+    def retrieveContentFromListOfQueriesSmartThreadsAllocations(list_of_queries):
+        if not isinstance(list_of_queries, list) or len(list_of_queries) == 0:
+            raise TypeError('arguments_array should be not empty list')
+
+
+        (good_querie, wrong_queries) = LoaderService._preProcessQueries(list_of_queries)
+        responses = ThreadPoolService.processTasksWithArguments(1, good_querie, LoaderService._retrieveContent)
+        (good_reponse, wrong_responses) = LoaderService._postProcessResponses(responses)
+        return good_reponse, wrong_responses, wrong_queries
+
 
 
 
