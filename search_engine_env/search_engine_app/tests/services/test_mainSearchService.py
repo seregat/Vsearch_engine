@@ -17,7 +17,7 @@ class mainSearchServiceTests(unittest.TestCase):
             expectedResponse = ''
             actualResponse = MainSearchService.searchOnGoogleFromFile(file)
         except Exception as e:
-            self.assertTrue(False,e)
+            self.assertTrue(False,e,str(e))
         return actualResponse
 
 if __name__ == "__main__":

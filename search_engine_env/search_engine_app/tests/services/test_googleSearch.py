@@ -20,10 +20,10 @@ class googleSearchTests(unittest.TestCase):
             #text_file = open(path_to_test_settings_file, "x")
             #text_file.write(responseString)
             #text_file.close()
-            self.assertTrue("div" in responseString)
+            self.assertTrue("div" in responseString,'response must contain div element')
             #print(responseString)
         except Exception as e:
-            self.assertTrue(False, e)
+            self.assertTrue(False, e,str(e))
 
 if __name__ == "__main__":
     unittest.main()
