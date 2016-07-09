@@ -1,4 +1,4 @@
-import search_engine_app
+
 from  search_engine_app.services.ThreadPoolService import ThreadPoolService
 from  search_engine_app.utils.Trace import Trace
 from  search_engine_app.services.GoogleSearchService import GoogleSearch

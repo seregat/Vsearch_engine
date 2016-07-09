@@ -1,6 +1,6 @@
 import types
 from multiprocessing.dummy import Pool
-import search_engine_app
+
 from  search_engine_app.utils.Trace import Trace
 
 

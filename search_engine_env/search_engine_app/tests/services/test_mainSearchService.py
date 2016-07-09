@@ -1,3 +1,5 @@
+import unittest
+
 import os
 from  search_engine_app.services.MainSearchService import MainSearchService
 from  search_engine_app.tests.services.test_googleSearch import googleSearchTests

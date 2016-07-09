@@ -1,4 +1,4 @@
-import search_engine_app
+
 from  search_engine_app.services.LoaderService import LoaderService
 
 class MainSearchService:
