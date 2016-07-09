@@ -23,7 +23,7 @@ class googleSearchTests(unittest.TestCase):
             self.assertTrue("div" in responseString,'response must contain div element')
             #print(responseString)
         except Exception as e:
-            self.assertTrue(False, e,str(e))
+            self.assertTrue(False, str(e))
 
 if __name__ == "__main__":
     unittest.main()

@@ -19,7 +19,7 @@ class LoaderServiceTest(unittest.TestCase):
             if isinstance(good_reponse, Exception):
                 self.assertTrue(False, "This must be response from url")
         except Exception as e:
-            self.assertTrue(False, e)
+            self.assertTrue(False,str(e))
 
 
     def test_retrieveContentFromQuery(self):
@@ -32,7 +32,7 @@ class LoaderServiceTest(unittest.TestCase):
             if isinstance(actual,Exception):
                 self.assertTrue(False,"This must be response from url")
         except Exception as e:
-            self.assertTrue(False,e,str(e))
+            self.assertTrue(False,str(e))
 
 
 
