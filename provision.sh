@@ -36,7 +36,7 @@ virtualenv3.4 env
 source env/bin/activate
 pip3.4 install --upgrade pip
 pip3.4 install uwsgi
-ln -s /usr/share/search/env/lib/python3.4/site-packages ${APPLICATION_ROOT_DIRECTORY}/src
+ln -s ${APPLICATION_ROOT_DIRECTORY}/env/lib/python3.4/site-packages ${APPLICATION_ROOT_DIRECTORY}/src
 deactivate
 #END DEFINE VIRTUAL ENV
 
@@ -80,8 +80,20 @@ chmod 700 ~/search-engine-pull
 #END DEFINE UPDATE FROM GIT REPOSITORY
 
 
-#UPDATE FROM GIT REPOSITORY
+#START APP UPDATE/INSTALL + GIT PULL
 ~/search-engine-pull
+#END APP UPDATE/INSTALL + GIT PULL
+
+
+
+#START DEFINE VIRTUAL ENV PYTHON PATHES
+cat >  ${APPLICATION_ROOT_DIRECTORY}/src/application_pathes.pth <<EOF
+$APPLICATION_ROOT_DIRECTORY
+${APPLICATION_ROOT_DIRECTORY}/search_engine_env
+EOF
+#END DEFINE VIRTUAL ENV PYTHON PATHES
+
+
 
 
 #START DEFINE UWSGI CONFIG
@@ -89,8 +101,6 @@ cat >  ${APPLICATION_ROOT_DIRECTORY}/etc/uwsgi.ini <<EOF
 [uwsgi]
 wsgi-file =${APPLICATION_ROOT_DIRECTORY}/search_engine_env/search_engine_app/flask_app.py
 home=${APPLICATION_ROOT_DIRECTORY}/env
-pythonpath=${APPLICATION_ROOT_DIRECTORY}/src
-pythonpath=${APPLICATION_ROOT_DIRECTORY}/search_engine_env
 virtualenv=${APPLICATION_ROOT_DIRECTORY}/env
 callable = app
 master = true

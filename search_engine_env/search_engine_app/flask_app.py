@@ -1,6 +1,7 @@
 
 import logging
 from flask import Flask,  request, render_template,redirect
+import search_engine_env.search_engine_app
 from search_engine_app.services.MainSearchService import MainSearchService
 from search_engine_app.Settings.Settings import Settings
 from logging import Formatter
@@ -102,7 +103,7 @@ def define_app_logger():
 def define_module_behaviour():
     global app
     if __name__ == '__main__':
-        serve();
+        serve()
 
 
 def serve():
