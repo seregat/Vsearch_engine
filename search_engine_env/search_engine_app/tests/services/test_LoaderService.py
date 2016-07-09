@@ -1,7 +1,7 @@
 import unittest
 
 from search_engine_app.services.LoaderService import LoaderService
-from  search_engine_app.tests.services.test_googleSearch import googleSearchTests
+from search_engine_app.tests.services.test_googleSearch import googleSearchTests
 
 mockupPath = googleSearchTests.getGoogleResponseMockupFilePath()
 LoaderService.setMockupMode(mockupPath)
@@ -15,7 +15,7 @@ class LoaderServiceTest(unittest.TestCase):
             print(good_reponse)
             self.assertFalse(wrong_responses,'wrong response must be empty')
             self.assertFalse(wrong_queries,'wrong query must be empty')
-            self.assertTrue("div" in good_reponse[LoaderService._RESPONSE_INDEX],'response must contain div element')
+            self.assertTrue("div" in good_reponse[0][LoaderService._RESPONSE_INDEX],'response must contain div element')
             if isinstance(good_reponse, Exception):
                 self.assertTrue(False, "This must be response from url")
         except Exception as e:
