@@ -67,6 +67,8 @@ cd $APPLICATION_ROOT_DIRECTORY
 git pull origin master
 source ${APPLICATION_ROOT_DIRECTORY}/env/bin/activate
 python3.4 search_engine_env/setup.py install
+pip3.4 install green
+green search_engine_env/search_engine_app/tests
 deactivate
 find $APPLICATION_ROOT_DIRECTORY -type d -print0 | xargs -0 chmod 750
 chown root:search_engine_app $APPLICATION_ROOT_DIRECTORY

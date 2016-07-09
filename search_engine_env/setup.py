@@ -12,8 +12,7 @@ setup(
         'urllib3',
         'urlparse3',
         'cookiejar',
-        'bs4',
-        'green'
+        'bs4'
     ],
     entry_points={
        'console_scripts': [
@@ -22,5 +21,5 @@ setup(
    },
    include_package_data=True,
    #setup_requires=['pytest-runner'],
-   tests_require=['green']
+   #tests_require=['green']
 )
