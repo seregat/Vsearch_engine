@@ -277,6 +277,7 @@ server {
     location / {
             include         uwsgi_params;
             uwsgi_pass      localhost:9000;
+            uwsgi_read_timeout 600;
     }
     location /static {
         #access_log off;
