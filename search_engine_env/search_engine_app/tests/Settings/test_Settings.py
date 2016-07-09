@@ -1,6 +1,5 @@
 import os
 import unittest
-import search_engine_app
 from search_engine_app.Settings.Settings import Settings
 
 

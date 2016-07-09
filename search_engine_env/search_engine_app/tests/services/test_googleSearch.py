@@ -1,5 +1,4 @@
 import unittest
-import search_engine_app
 from  search_engine_app.services.GoogleSearchService import GoogleSearch
 import  os
 

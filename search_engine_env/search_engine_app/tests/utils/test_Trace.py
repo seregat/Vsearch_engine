@@ -1,5 +1,4 @@
 import unittest
-import search_engine_app
 from  search_engine_app.utils.Trace import Trace
 
 

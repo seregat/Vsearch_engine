@@ -1,8 +1,6 @@
 import os
-import unittest
-import search_engine_app
 from  search_engine_app.services.MainSearchService import MainSearchService
-from  search_engine_app.tests.services.googleSearchTests import googleSearchTests
+from  search_engine_app.tests.services.test_googleSearch import googleSearchTests
 
 mockupPath = googleSearchTests.getGoogleResponseMockupFilePath()
 MainSearchService.setMockupMode(mockupPath)
