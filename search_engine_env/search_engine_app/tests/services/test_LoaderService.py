@@ -16,6 +16,8 @@ class LoaderServiceTest(unittest.TestCase):
             self.assertFalse(wrong_responses,'wrong response must be empty')
             self.assertFalse(wrong_queries,'wrong query must be empty')
             for response in good_reponse:
+                data = response[LoaderService._RESPONSE_INDEX]
+                print(data)
                 self.assertTrue("div" in response[LoaderService._RESPONSE_INDEX],'response must contain div element:{0}'.format(response))
 
             if isinstance(good_reponse, Exception):
