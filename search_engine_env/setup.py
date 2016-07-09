@@ -19,5 +19,8 @@ setup(
            'serve=search_engine_app.flask_app:serve'
            ]
    },
-   include_package_data=True
+   include_package_data=True,
+   setup_requires=['pytest-runner'],
+   tests_require=['pytest'],
+   testpaths = ['tests']
 )
