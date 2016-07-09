@@ -12,7 +12,10 @@ class LoaderServiceTest(unittest.TestCase):
         try:
             query = ["https://docs.python.org","some search"]
             (good_reponse,wrong_responses,wrong_queries) = LoaderService.retrieveContentFromListOfQueries(query)
-            print(good_reponse)
+            #print(good_reponse)
+            self.assertFalse(wrong_responses)
+            self.assertFalse(wrong_queries)
+            self.assertDictContains(good_reponse, "div")
             if isinstance(good_reponse, Exception):
                 self.assertTrue(False, "This must be response from url")
         except Exception as e:

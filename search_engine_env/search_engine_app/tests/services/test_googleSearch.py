@@ -20,8 +20,8 @@ class googleSearchTests(unittest.TestCase):
             #text_file = open(path_to_test_settings_file, "x")
             #text_file.write(responseString)
             #text_file.close()
-            print(responseString)
-            self.assertIsNotNone(responseString)
+            self.assertDictContains(responseString, "div")
+            #print(responseString)
         except Exception as e:
             self.assertTrue(False, e)
 
