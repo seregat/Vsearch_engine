@@ -27,7 +27,7 @@ class LoaderServiceTest(unittest.TestCase):
 
             query = "https://docs.python.org"
             actual = LoaderService._retrieveContent(query)
-            self.assertTrue("https://docs.python.org" in actual)
+            self.assertTrue("div" in actual)
             print(actual)
             if isinstance(actual,Exception):
                 self.assertTrue(False,"This must be response from url")
