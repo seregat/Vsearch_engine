@@ -15,7 +15,7 @@ class LoaderServiceTest(unittest.TestCase):
             #print(good_reponse)
             self.assertFalse(wrong_responses)
             self.assertFalse(wrong_queries)
-            self.assertContains(good_reponse, "div")
+            self.assertTrue("div" in good_reponse)
             if isinstance(good_reponse, Exception):
                 self.assertTrue(False, "This must be response from url")
         except Exception as e:
@@ -27,7 +27,7 @@ class LoaderServiceTest(unittest.TestCase):
 
             query = "https://docs.python.org"
             actual = LoaderService._retrieveContent(query)
-            self.assertContains(actual, "https://docs.python.org")
+            self.assertTrue("https://docs.python.org" in actual)
             print(actual)
             if isinstance(actual,Exception):
                 self.assertTrue(False,"This must be response from url")
