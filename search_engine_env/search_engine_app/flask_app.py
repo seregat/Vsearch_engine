@@ -1,7 +1,6 @@
 
 import logging
 from flask import Flask,  request, render_template,redirect
-import search_engine_env.search_engine_app
 from search_engine_app.services.MainSearchService import MainSearchService
 from search_engine_app.Settings.Settings import Settings
 from logging import Formatter
