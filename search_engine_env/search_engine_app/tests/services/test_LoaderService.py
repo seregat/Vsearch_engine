@@ -12,10 +12,10 @@ class LoaderServiceTest(unittest.TestCase):
         try:
             query = ["https://docs.python.org","some search"]
             (good_reponse,wrong_responses,wrong_queries) = LoaderService.retrieveContentFromListOfQueries(query)
-            #print(good_reponse)
+            print(good_reponse)
             self.assertFalse(wrong_responses,'wrong response must be empty')
             self.assertFalse(wrong_queries,'wrong query must be empty')
-            self.assertTrue("div" in good_reponse,'response must contain div element')
+            self.assertTrue("div" in good_reponse[LoaderService._RESPONSE_INDEX],'response must contain div element')
             if isinstance(good_reponse, Exception):
                 self.assertTrue(False, "This must be response from url")
         except Exception as e:
@@ -27,7 +27,7 @@ class LoaderServiceTest(unittest.TestCase):
 
             query = "https://docs.python.org"
             actual = LoaderService._retrieveContent(query)
-            self.assertTrue("div" in actual,'response must contain div element')
+            self.assertTrue("div" in actual[LoaderService._RESPONSE_INDEX],'response must contain div element')
             print(actual)
             if isinstance(actual,Exception):
                 self.assertTrue(False,"This must be response from url")
